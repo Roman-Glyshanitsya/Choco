@@ -1,0 +1,211 @@
+.taste__title {
+    width: 283px;
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+
+.taste__title--colored {
+    color: var(--link-color);
+}
+
+.taste__text {
+    width: 335px;
+    color: var(--main-text-color);
+    text-align: center;
+    font-weight: 400;
+    line-height: 128.571%;
+    letter-spacing: -0.28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+
+.taste__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.taste__item {
+    width: 335px;
+    height: 270px;
+    border-radius: 15px;
+}
+
+.taste__item:nth-child(1) {
+    background-color: var(--link-color);
+    color: #FFF;
+}
+
+.taste__item:nth-child(2n) {
+    border: 1px solid var(--link-color);
+    background-color: #FFF;
+    color: var(--main-text-color);
+}
+
+.taste__item:nth-child(3) {
+    background-color: var(--background-color);
+    color: #FFF;
+}
+
+.taste__card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+}
+
+.taste__picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.taste__subtitle {
+    font-weight: 600;
+    line-height: 128.571%;
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+}
+
+.taste__card-overlay {
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #FFF;
+    transform: translateY(100%);
+    transition: transform var(--animation);
+
+    padding: 28px;
+}
+
+.taste__item:hover,
+.taste__item:focus {
+    border-color: transparent;
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+.taste__item:hover .taste__card-overlay,
+.taste__item:focus .taste__card-overlay {
+    transform: translateY(0);
+}
+
+.taste__card-overlay__title {
+    color: var(--main-text-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.taste__card-overlay__button-list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.taste__card-overlay__linked-item {
+    padding: 6px 16px;
+
+    border-radius: 35px;
+    background-color: var(--link-color);
+
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.taste__card-overlay__item {
+    padding: 6px 16px;
+
+    border-radius: 35px;
+    border: 1px solid var(--link-color);
+    background-color: var(--body-color);
+
+    color: var(--main-text-color);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.taste__card-overlay__text {
+    font-weight: 400;
+    line-height: 128.571%;
+    letter-spacing: -0.28px;
+
+    -webkit-line-clamp: 8;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    color: var(--main-text-color);
+}
+
+@media screen and (min-width: 768px) {
+    .taste__title {
+        width: 411px;
+        font-size: 24px;
+        line-height: 116.667%;
+        letter-spacing: -0.72px;
+        margin-bottom: 28px;
+    }
+
+    .taste__text {
+        width: 486px;
+        margin-bottom: 50px;
+    }
+
+    .taste__list {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .taste__item {
+        width: 336px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .taste__item:nth-child(2) {
+        order: 3;
+    }
+
+    .taste__item:nth-child(3) {
+        order: 4;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .taste__list {
+        gap: 19px;
+        flex-wrap: nowrap;
+    }
+
+    .taste__item {
+        width: 270px;
+    }
+
+    .taste__picture {
+        margin-bottom: 36px;
+    }
+
+    .taste__item:nth-child(4) .taste__card-overlay__text {
+        -webkit-line-clamp: 6;
+    }
+}

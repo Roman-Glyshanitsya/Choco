@@ -1,0 +1,24 @@
+.pop-up-buy {
+    width: 311px;
+    height: 350px;
+    border-radius: 15px;
+
+    z-index: 50;
+    background-color: #FD9222;
+}
+
+.modal {}
+
+.pop-up-buy__close-btn {}
+
+.js-modal-close {}
+
+.pop-up-buy__close-icon {}
+
+.pop-up-buy__title {}
+
+.pop-up-buy__text {}
+
+.overlay {}
+
+.js-overlay-modal {}

@@ -1,0 +1,133 @@
+<div class="buy-now-modal modal" data-modal="1">
+  <button type="button" class="buy-now-modal__close-btn js-modal-close">
+    <svg class="buy-now-modal__close-icon">
+      <use href="../img/icons/mobile/symbol-defs.svg#icon-x"></use>
+    </svg>
+  </button>
+  <h2 class="buy-now-modal__title">
+    <span class="buy-now-modal__title--colored">bUY</span> nOW
+  </h2>
+  <div class="swiper buy-now-modal__swiper">
+    <ul class="buy-now-modal__list swiper-wrapper">
+      <li class="buy-now-modal__item swiper-slide">
+        <img
+          srcset="
+            /img/buy-swiper/image-1.png    1x,
+            /img/buy-swiper/image-1@2x.png 2x
+          "
+          src="#"
+          alt="Chocolate"
+          class="buy-now-modal__img"
+        />
+        <div class="buy-now-modal__weight">100 g</div>
+      </li>
+      <li class="buy-now-modal__item swiper-slide">
+        <img
+          srcset="
+            /img/buy-swiper/image-2.png    1x,
+            /img/buy-swiper/image-2@2x.png 2x
+          "
+          src="#"
+          alt="Chocolate"
+          class="buy-now-modal__img"
+        />
+        <div class="buy-now-modal__weight">200 g</div>
+      </li>
+      <li class="buy-now-modal__item swiper-slide">
+        <img
+          srcset="
+            /img/buy-swiper/image-3.png    1x,
+            /img/buy-swiper/image-3@2x.png 2x
+          "
+          src="#"
+          alt="Chocolate"
+          class="buy-now-modal__img"
+        />
+        <div class="buy-now-modal__weight">300 g</div>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+  </div>
+  <form class="buy-now-modal__form">
+    <label class="buy-now-modal__label">
+      <span class="buy-now-modal__label-title">Personal information</span>
+      <div class="buy-now-modal__label-name-thumb">
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Name"
+          pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
+          minlength="2"
+          class="buy-now-modal__input"
+        />
+        <input
+          type="text"
+          name="user_surname"
+          placeholder="Surname"
+          pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
+          minlength="2"
+          class="buy-now-modal__input"
+        />
+      </div>
+    </label>
+    <label class="buy-now-modal__label">
+      <span class="buy-now-modal__label-title">Email</span>
+      <input
+        type="email"
+        name="user_email"
+        placeholder="Enter your email"
+        minlength="2"
+        class="buy-now-modal__input"
+      />
+    </label>
+    <label class="buy-now-modal__label">
+      <span class="buy-now-modal__label-title">Phone number</span>
+      <div class="buy-now-modal__label-phone-thumb">
+        <input
+          type="tel"
+          name="user_phone"
+          placeholder="Phone number"
+          pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
+          title="xx-xxx-xx-xx"
+          class="buy-now-modal__input"
+        />
+        <svg class="buy-now-modal__flag-icon">
+          <use href=""></use>
+        </svg>
+        <span class="buy-now-modal__label-phone">+380</span>
+      </div>
+    </label>
+    <label class="buy-now-modal__label">
+      <span class="buy-now-modal__label-title">Card number</span>
+      <div class="buy-now-modal__label-card-thumb">
+        <input
+          type="number"
+          name="user_card"
+          placeholder="Enter card"
+          pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$"
+          title="xxxx-xxxx-xxxx-xxxx"
+          class="buy-now-modal__input"
+        />
+        <svg class="buy-now-modal__card-icon">
+          <use href=""></use>
+        </svg>
+      </div>
+    </label>
+    <label class="buy-now-modal__label">
+      <span class="buy-now-modal__label-title">Comment</span>
+      <textarea
+        name="user_message"
+        placeholder="Enter text"
+        class="buy-now-modal__input"
+      ></textarea>
+    </label>
+    <button
+      type="submit"
+      class="buy-now-modal__submit-button js-modal-close js-open-modal"
+      data-modal="3"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<div class="overlay js-overlay-modal"></div>
