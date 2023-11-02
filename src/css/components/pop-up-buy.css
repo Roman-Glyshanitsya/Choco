@@ -1,24 +1,57 @@
 .pop-up-buy {
     width: 311px;
     height: 350px;
+    padding: 84px 24px 84px 68px;
     border-radius: 15px;
-
-    z-index: 50;
     background-color: #FD9222;
 }
 
-.modal {}
+.pop-up-buy__close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
 
-.pop-up-buy__close-btn {}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.js-modal-close {}
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #FCF1E0;
+}
 
-.pop-up-buy__close-icon {}
+.pop-up-buy__close-icon {
+    width: 16px;
+    height: 16px;
+    stroke: #FD9222;
+}
 
-.pop-up-buy__title {}
+.pop-up-buy__title {
+    color: #FCF1E0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
 
-.pop-up-buy__text {}
+.pop-up-buy__text {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 114.286%;
+    letter-spacing: -0.28px;
+}
 
-.overlay {}
+.pop-up-buy__text--colored {
+    color: #FCF1E0;
+}
 
-.js-overlay-modal {}
+.pop-up-buy__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
