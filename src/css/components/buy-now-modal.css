@@ -53,7 +53,6 @@
 
 .buy-now-modal__item {
     width: 231px;
-    /* height: 257px; */
     padding: 32px;
     border-radius: 15px;
     border: 1px solid rgba(17, 17, 17, 0.10);
@@ -108,6 +107,7 @@
     width: 100%;
     height: 45px;
     padding: 14px 18px;
+    cursor: pointer;
 
     color: var(--main-text-color);
     font-weight: 500;
@@ -122,26 +122,172 @@
     color: rgba(64, 64, 64, 0.30);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: -0.28px;
 }
 
-.buy-now-modal__label-phone-thumb {}
+.buy-now-modal__label-phone-thumb {
+    position: relative;
+}
+
+.buy-now-modal__label-phone-thumb .buy-now-modal__input {
+    padding: 10px 29px 10px 106px;
+}
 
 .buy-now-modal__flag-icon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
     width: 24px;
     height: 18px;
 }
 
-.buy-now-modal__label-phone {}
+.buy-now-modal__label-phone {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
 
-.buy-now-modal__label-card-thumb {}
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.28px;
 
-.buy-now-modal__card-icon {
-    width: 32px;
-    height: 21px;
 }
 
-.buy-now-modal__submit-button {}
+.buy-now-modal__label-phone::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+
+    width: 2px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: rgba(17, 17, 17, 0.05);
+
+}
+
+.buy-now-modal__label-card-thumb {
+    position: relative;
+}
+
+.buy-now-modal__card-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 13px;
+}
+
+.buy-now-modal__input-message {
+    height: 91px;
+    width: 100%;
+    resize: none;
+}
+
+.buy-now-modal__submit-button {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 12px 28px;
+    border-radius: 100px;
+    background: #FD9222;
+}
+
+@media screen and (min-width: 768px) {
+    .buy-now-modal {
+        width: 609px;
+        padding: 48px;
+    }
+
+    .buy-now-modal__close-btn {
+        top: 24px;
+        right: 24px;
+    }
+
+    .buy-now-modal__close-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .buy-now-modal__title {
+        font-size: 24px;
+        line-height: 116.667%;
+        letter-spacing: -0.72px;
+    }
+
+    .buy-now-modal__item {
+        width: 160px;
+        padding: 24px 20px 18px;
+    }
+
+    .buy-now-modal__img {
+        margin-bottom: 14px;
+    }
+
+    .buy-now-modal__label-title {
+        font-size: 14px;
+        line-height: 128.571%;
+        letter-spacing: -0.28px;
+    }
+
+    .buy-now-modal__label-name-thumb {
+        display: flex;
+        flex-direction: row;
+        gap: 21px;
+    }
+
+    .buy-now-modal__input {
+        height: 66px;
+        padding: 22px 24px;
+        font-size: 18px;
+    }
+
+    .buy-now-modal__input::placeholder {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+    }
+
+    .buy-now-modal__label-phone-thumb .buy-now-modal__input {
+        padding: 17px 24px 17px 177px;
+    }
+
+    .buy-now-modal__flag-icon {
+        left: 24px;
+        width: 32px;
+        height: 24px;
+    }
+
+    .buy-now-modal__label-phone {
+        left: 74px;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+    }
+
+    .buy-now-modal__label-phone::after {
+        left: 75px;
+    }
+
+    .buy-now-modal__card-icon {
+        right: 24px;
+        width: 30px;
+        height: 18px;
+    }
+
+    .buy-now-modal__input-message {
+        height: 137px;
+        width: 100%;
+    }
+
+    .buy-now-modal__submit-button {
+        padding: 14px 40px;
+    }
+}
