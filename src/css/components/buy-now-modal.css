@@ -89,22 +89,28 @@
 }
 
 .buy-now-modal__label-title {
+    display: block;
     color: #000;
     font-size: 12px;
     font-weight: 500;
     line-height: 116.667%;
     letter-spacing: -0.24px;
+    margin-bottom: 8px;
 }
 
-.buy-now-modal__label-name-thumb {}
+.buy-now-modal__label-name-thumb {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
 
 .buy-now-modal__input {
     width: 100%;
     height: 45px;
     padding: 14px 18px;
 
-    color: rgba(64, 64, 64, 0.30);
-    font-weight: 400;
+    color: var(--main-text-color);
+    font-weight: 500;
     letter-spacing: -0.28px;
 
     border-radius: 8px;
@@ -112,14 +118,30 @@
     box-shadow: 0px 5.44492px 5.44492px 0px rgba(0, 0, 0, 0.03);
 }
 
+.buy-now-modal__input::placeholder {
+    color: rgba(64, 64, 64, 0.30);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
 .buy-now-modal__label-phone-thumb {}
 
-.buy-now-modal__flag-icon {}
+.buy-now-modal__flag-icon {
+    width: 24px;
+    height: 18px;
+}
 
 .buy-now-modal__label-phone {}
 
 .buy-now-modal__label-card-thumb {}
 
-.buy-now-modal__card-icon {}
+.buy-now-modal__card-icon {
+    width: 32px;
+    height: 21px;
+}
 
 .buy-now-modal__submit-button {}
