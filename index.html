@@ -17,7 +17,7 @@
     />
     
     <script type="module" crossorigin src="/Choco/assets/index-8dab7f77.js"></script>
-    <link rel="stylesheet" href="/Choco/assets/index-ae82943d.css">
+    <link rel="stylesheet" href="/Choco/assets/index-1ed230f4.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -892,6 +892,7 @@
           placeholder="Name"
           pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
           minlength="2"
+          required
           class="buy-now-modal__input"
         />
         <input
@@ -900,6 +901,7 @@
           placeholder="Surname"
           pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
           minlength="2"
+          required
           class="buy-now-modal__input"
         />
       </div>
@@ -910,7 +912,9 @@
         type="email"
         name="user_email"
         placeholder="Enter your email"
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         minlength="2"
+        required
         class="buy-now-modal__input"
       />
     </label>
@@ -923,6 +927,7 @@
           placeholder="Phone number"
           pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
           title="xx-xxx-xx-xx"
+          required
           class="buy-now-modal__input"
         />
         <svg class="buy-now-modal__flag-icon">
@@ -940,6 +945,7 @@
           placeholder="Enter card"
           pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$"
           title="xxxx-xxxx-xxxx-xxxx"
+          required
           class="buy-now-modal__input"
         />
         <svg class="buy-now-modal__card-icon">
@@ -995,19 +1001,104 @@
 <div class="overlay js-overlay-modal"></div>
 
     <div class="review-modal modal" data-modal="2">
-  <button type="button" class="buy-now-modal__close-btn js-modal-close">
-    <svg class="buy-now-modal__close-icon">
-      <use href="../img/icons/mobile/symbol-defs.svg#icon-x"></use>
+  <button type="button" class="review-modal__close-btn js-modal-close">
+    <svg class="review-modal__close-icon">
+      <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-x"></use>
     </svg>
   </button>
-  <button
-    type="submit"
-    class="buy-now-modal__submit-button js-modal-close js-open-modal"
-    data-modal="4"
-  >
-    Send
-  </button>
+  <h2 class="review-modal__title">
+    leave a review <br />
+    about
+    <span class="review-modal__title--colored">our chocolate</span>
+  </h2>
+
+  <form class="review-modal__form">
+    <label class="review-modal__label">
+      <input
+        type="text"
+        name="user_name"
+        placeholder="Name"
+        pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
+        minlength="2"
+        required
+        class="review-modal__input"
+      />
+    </label>
+    <label class="review-modal__label">
+      <input
+        type="email"
+        name="user_email"
+        placeholder="Enter your email"
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        minlength="2"
+        required
+        class="review-modal__input"
+      />
+    </label>
+    <label class="review-modal__label">
+      <div class="review-modal__label-phone-thumb">
+        <input
+          type="tel"
+          name="user_phone"
+          placeholder="Phone number"
+          pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
+          title="xx-xxx-xx-xx"
+          required
+          class="review-modal__input"
+        />
+        <svg class="review-modal__flag-icon">
+          <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-ua-flag"></use>
+        </svg>
+        <span class="review-modal__label-phone">+380</span>
+      </div>
+    </label>
+    <label class="review-modal__label">
+      <textarea
+        name="user_message"
+        placeholder="Enter text"
+        class="review-modal__input review-modal__input-message"
+      ></textarea>
+    </label>
+    <button
+      type="submit"
+      class="review-modal__submit-button js-modal-close js-open-modal"
+      data-modal="4"
+    >
+      Send
+    </button>
+  </form>
 </div>
+<div class="overlay js-overlay-modal"></div>
+
+    <div class="pop-up-review modal" data-modal="4">
+  <button type="button" class="pop-up-review__close-btn js-modal-close">
+    <svg class="pop-up-review__close-icon">
+      <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-x"></use>
+    </svg>
+  </button>
+  <h2 class="pop-up-review__title">
+    thank you <br />
+    for your feedback!
+  </h2>
+  <p class="pop-up-review__text">
+    We are so happy to hear <br />
+    from you!
+  </p>
+  <div class="pop-up-review__img">
+    <picture>
+      <source
+        srcset="/Choco/assets/choco-bar-tablet-desktop-195d42b8.png 1x, /Choco/assets/choco-bar-tablet-desktop@2x-90d0cc4f.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/Choco/assets/choco-bar-mobile-daeab049.png 1x, /Choco/assets/choco-bar-mobile@2x-b8a44c37.png 2x"
+        media="(max-width: 767px)"
+      />
+      <img src="#" alt="choco bar" />
+    </picture>
+  </div>
+</div>
+<div class="overlay js-overlay-modal"></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
