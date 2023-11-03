@@ -1,13 +1,13 @@
-.pop-up-buy {
+.pop-up-review {
     width: 311px;
     height: 350px;
-    padding: 84px 24px 84px 68px;
+    padding: 84px 24px 84px 58px;
     border-radius: 15px;
     background-color: var(--link-color);
     overflow: hidden;
 }
 
-.pop-up-buy__close-btn {
+.pop-up-review__close-btn {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -24,25 +24,25 @@
     transition: all var(--animation);
 }
 
-.pop-up-buy__close-icon {
+.pop-up-review__close-icon {
     width: 16px;
     height: 16px;
     stroke: var(--link-color);
     transition: all var(--animation);
 }
 
-.pop-up-buy__close-btn:hover .pop-up-buy__close-icon,
-.pop-up-buy__close-btn:focus .pop-up-buy__close-icon {
+.pop-up-review__close-btn:hover .pop-up-review__close-icon,
+.pop-up-review__close-btn:focus .pop-up-review__close-icon {
     transform: scale(1.7);
     stroke: #FCF1E0;
 }
 
-.pop-up-buy__close-btn:hover,
-.pop-up-buy__close-btn:focus {
+.pop-up-review__close-btn:hover,
+.pop-up-review__close-btn:focus {
     background-color: #FD9222;
 }
 
-.pop-up-buy__title {
+.pop-up-review__title {
     color: #FCF1E0;
     font-size: 20px;
     font-weight: 600;
@@ -52,7 +52,7 @@
     margin-bottom: 8px;
 }
 
-.pop-up-buy__text {
+.pop-up-review__text {
     color: #FFF;
     font-size: 14px;
     font-weight: 400;
@@ -60,24 +60,20 @@
     letter-spacing: -0.28px;
 }
 
-.pop-up-buy__text--colored {
-    color: #FCF1E0;
-}
-
-.pop-up-buy__img {
+.pop-up-review__img {
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
 @media screen and (min-width: 768px) {
-    .pop-up-buy {
+    .pop-up-review {
         width: 516px;
         height: 414px;
-        padding: 154px 44px 154px 163px;
+        padding: 163px 49px 163px 170px;
     }
 
-    .pop-up-buy__close-btn {
+    .pop-up-review__close-btn {
         top: 24px;
         right: 24px;
 
@@ -85,24 +81,20 @@
         height: 38px;
     }
 
-    .pop-up-buy__close-icon {
+    .pop-up-review__close-icon {
         width: 22px;
         height: 22px;
     }
 
-    .pop-up-buy__title {
+    .pop-up-review__title {
         font-size: 24px;
         line-height: 116.667%;
         letter-spacing: -0.48px;
     }
 
-    .pop-up-buy__text {
+    .pop-up-review__text {
         font-size: 18px;
         line-height: 133.333%;
         letter-spacing: -0.36px;
-    }
-
-    .pop-up-buy__text--colored {
-        font-size: 24px;
     }
 }
