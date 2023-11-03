@@ -46,8 +46,16 @@
     padding: 12px 28px;
 
     border-radius: 100px;
-    background: #FD9222;
+    background-color: var(--link-color);
     margin: 0 auto;
+
+    transition: all var(--animation);
+}
+
+.sellers__mobile-button:hover,
+.sellers__mobile-button:focus {
+    background-color: #FCF1E0;
+    color: var(--link-color);
 }
 
 .sellers__item--desktop {
@@ -105,6 +113,14 @@
 
         border-radius: 100px;
         background: #FD9222;
+
+        transition: all var(--animation);
+    }
+
+    .sellers__desktop-content__button:hover,
+    .sellers__desktop-content__button:focus {
+        background-color: #FCF1E0;
+        color: var(--link-color);
     }
 }
 
