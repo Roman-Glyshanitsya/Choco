@@ -16,8 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     
-    <script type="module" crossorigin src="/Choco/assets/index-8dab7f77.js"></script>
-    <link rel="stylesheet" href="/Choco/assets/index-d31a11e2.css">
+    <script type="module" crossorigin src="/Choco/assets/index-5af79620.js"></script>
+    <link rel="stylesheet" href="/Choco/assets/index-07b169fe.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -841,7 +841,8 @@
 
     <!-- Modals -->
 
-    <div class="buy-now-modal modal" data-modal="1">
+    <div class="overlay js-overlay-modal"></div>
+<div class="buy-now-modal modal" data-modal="1" id="js-buy-now-modal">
   <button type="button" class="buy-now-modal__close-btn js-modal-close">
     <svg class="buy-now-modal__close-icon">
       <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-x"></use>
@@ -894,8 +895,8 @@
           placeholder="Name"
           pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
           minlength="2"
-          required
           class="buy-now-modal__input"
+          required
         />
         <input
           type="text"
@@ -903,7 +904,6 @@
           placeholder="Surname"
           pattern="^[a-zA-Zа-яА-Яі-Ії-Ї]+$"
           minlength="2"
-          required
           class="buy-now-modal__input"
         />
       </div>
@@ -916,7 +916,6 @@
         placeholder="Enter your email"
         pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         minlength="2"
-        required
         class="buy-now-modal__input"
       />
     </label>
@@ -929,7 +928,6 @@
           placeholder="Phone number"
           pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
           title="xx-xxx-xx-xx"
-          required
           class="buy-now-modal__input"
         />
         <svg class="buy-now-modal__flag-icon">
@@ -947,7 +945,6 @@
           placeholder="Enter card"
           pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$"
           title="xxxx-xxxx-xxxx-xxxx"
-          required
           class="buy-now-modal__input"
         />
         <svg class="buy-now-modal__card-icon">
@@ -965,16 +962,16 @@
     </label>
     <button
       type="submit"
-      class="buy-now-modal__submit-button js-modal-close js-open-modal"
-      data-modal="3"
+      class="buy-now-modal__submit-button"
+      id="js-buy-now-pop-up"
     >
       Submit
     </button>
   </form>
 </div>
-<div class="overlay js-overlay-modal"></div>
 
-    <div class="pop-up-buy modal" data-modal="3">
+    <div class="overlay js-overlay-modal"></div>
+<div class="pop-up-buy modal modal3" data-modal="3">
   <button type="button" class="pop-up-buy__close-btn js-modal-close">
     <svg class="pop-up-buy__close-icon">
       <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-x"></use>
@@ -1000,9 +997,8 @@
     </picture>
   </div>
 </div>
-<div class="overlay js-overlay-modal"></div>
 
-    <div class="review-modal modal" data-modal="2">
+    <div class="review-modal modal" data-modal="2" id="review-modal-form">
   <button type="button" class="review-modal__close-btn js-modal-close">
     <svg class="review-modal__close-icon">
       <use href="/Choco/assets/symbol-defs-f3300b7f.svg#icon-x"></use>
@@ -1033,7 +1029,6 @@
         placeholder="Enter your email"
         pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         minlength="2"
-        required
         class="review-modal__input"
       />
     </label>
@@ -1045,7 +1040,6 @@
           placeholder="Phone number"
           pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
           title="xx-xxx-xx-xx"
-          required
           class="review-modal__input"
         />
         <svg class="review-modal__flag-icon">
@@ -1063,8 +1057,8 @@
     </label>
     <button
       type="submit"
-      class="review-modal__submit-button js-modal-close js-open-modal"
-      data-modal="4"
+      class="review-modal__submit-button"
+      id="js-review-modal"
     >
       Send
     </button>
@@ -1136,6 +1130,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
   </body>
 </html>
