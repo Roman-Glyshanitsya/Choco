@@ -1,4 +1,4 @@
-<div class="review-modal modal" data-modal="2">
+<div class="review-modal modal" data-modal="2" id="review-modal-form">
   <button type="button" class="review-modal__close-btn js-modal-close">
     <svg class="review-modal__close-icon">
       <use href="/img/icons/mobile/symbol-defs.svg#icon-x"></use>
@@ -29,7 +29,6 @@
         placeholder="Enter your email"
         pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         minlength="2"
-        required
         class="review-modal__input"
       />
     </label>
@@ -41,7 +40,6 @@
           placeholder="Phone number"
           pattern="^[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$"
           title="xx-xxx-xx-xx"
-          required
           class="review-modal__input"
         />
         <svg class="review-modal__flag-icon">
@@ -59,8 +57,8 @@
     </label>
     <button
       type="submit"
-      class="review-modal__submit-button js-modal-close js-open-modal"
-      data-modal="4"
+      class="review-modal__submit-button"
+      id="js-review-modal"
     >
       Send
     </button>

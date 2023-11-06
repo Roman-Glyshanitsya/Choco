@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
+      document.body.classList.add('modal-open'); //added
+
       var modalId = this.getAttribute('data-modal'),
         modalElem = document.querySelector(
           '.modal[data-modal="' + modalId + '"]'
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       modalElem.classList.add('active');
       overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      // document.body.style.overflow = 'hidden';
     });
   });
 
@@ -49,9 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function (e) {
       var parentModal = this.closest('.modal');
 
+      document.body.classList.remove('modal-open'); //added
+
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
-      document.body.style.overflow = '';
+      // document.body.style.overflow = '';
     });
   });
 
@@ -62,15 +66,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
-        document.querySelector('.overlay').classList.remove('active');
+        document.querySelector('.js-overlay-modal').classList.remove('active');
+        document.body.classList.remove('modal-open'); //added
       }
     },
     false
   );
 
-  overlay.addEventListener('click', function () {
+  overlay.addEventListener('click', function (e) {
+    if (e.target !== e.currentTarget) {
+      return;
+    }
+
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open'); //added
+    // document.body.style.overflow = '';
   });
+
+  //added jQuery
+  $(document).ready(function () {
+    $(function () {
+      $('#js-buy-now-modal').submit(function (e) {
+        e.preventDefault();
+        $('#js-buy-now-pop-up')
+          .attr('data-modal', '3')
+          .addClass('js-open-modal');
+
+        setTimeout(() => {
+          document.querySelector('.modal.active').classList.remove('active');
+          this.classList.remove('active');
+          document.body.classList.remove('modal-open');
+          $('.pop-up-buy').addClass('active');
+        }, 300);
+      });
+    });
+
+    $(function () {
+      $('#review-modal-form').submit(function (e) {
+        e.preventDefault();
+        $('#js-review-modal').attr('data-modal', '4').addClass('js-open-modal');
+
+        setTimeout(() => {
+          document.querySelector('.modal.active').classList.remove('active');
+          this.classList.remove('active');
+          document.body.classList.remove('modal-open');
+          $('.pop-up-review').addClass('active');
+        }, 300);
+      });
+    });
+  });
+
+  // end
 });
