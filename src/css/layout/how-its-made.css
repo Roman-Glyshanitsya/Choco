@@ -61,11 +61,20 @@
     transform: scale(120%);
 }
 
+.how-its-made__video-button:hover .how-its-made__video-icon,
+.how-its-made__video-button:focus .how-its-made__video-icon {
+    fill: var(--link-color);
+    stroke: var(--link-color);
+}
+
 .how-its-made__video-icon {
     width: 35px;
     height: 35px;
 
-    transition: transform var(--animation);
+    fill: #f5f4f4;
+    stroke: #fff;
+
+    transition: all var(--animation);
 }
 
 .how-its-made__content-thumb {
