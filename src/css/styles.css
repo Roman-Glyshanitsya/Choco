@@ -17,6 +17,7 @@
 @import url('./layout/subscribe.css');
 @import url('./layout/footer.css');
 
+@import url('./components/scrollbar.css');
 @import url('./components/overlay.css');
 @import url('./components/mobile-menu.css');
 @import url('./components/buy-now-modal.css');

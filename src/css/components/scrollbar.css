@@ -1,0 +1,14 @@
+/* buy-now-modal scrollbar */
+.buy-now-modal::-webkit-scrollbar {
+    width: 7px;
+}
+
+.buy-now-modal::-webkit-scrollbar-track {
+    background: var(--body-color);
+    margin: 15px;
+}
+
+.buy-now-modal::-webkit-scrollbar-thumb {
+    background-color: var(--link-color);
+    border-radius: 15px;
+}
