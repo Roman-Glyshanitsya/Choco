@@ -29,7 +29,7 @@
 
 .subscribe-modal__bcg-img {
     height: 169px;
-    background-image: url('../img/pop-up/choco-subscribe-mobile.jpg');
+    background-image: url('/img/pop-up/choco-subscribe-mobile.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
 screen and (min-resolution: 192dpi) and (max-width: 767px),
 screen and (min-resolution: 2dppx) and (max-width: 767px) {
     .subscribe-modal__bcg-img {
-        background-image: url('../img/pop-up/choco-subscribe-mobile@2x.jpg');
+        background-image: url('/img/pop-up/choco-subscribe-mobile@2x.jpg');
     }
 }
 
@@ -127,7 +127,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
     .subscribe-modal__bcg-img {
         height: 196px;
-        background-image: url('../img/pop-up/choco-subscribe-tablet-desktop.jpg');
+        background-image: url('/img/pop-up/choco-subscribe-tablet-desktop.jpg');
     }
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
@@ -135,7 +135,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     screen and (min-resolution: 192dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
         .subscribe {
-            background-image: url('../img/pop-up/choco-subscribe-tablet-desktop@2x.jpg');
+            background-image: url('/img/pop-up/choco-subscribe-tablet-desktop@2x.jpg');
         }
     }
 

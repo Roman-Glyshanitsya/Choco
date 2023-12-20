@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
-      document.body.classList.add('modal-open'); //added
+      document.body.classList.add('modal-open');
 
       var modalId = this.getAttribute('data-modal'),
         modalElem = document.querySelector(
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       modalElem.classList.add('active');
       overlay.classList.add('active');
-      // document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     });
   });
 
@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function (e) {
       var parentModal = this.closest('.modal');
 
-      document.body.classList.remove('modal-open'); //added
+      document.body.classList.remove('modal-open');
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
-      // document.body.style.overflow = '';
+      document.body.style.overflow = '';
     });
   });
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.js-overlay-modal').classList.remove('active');
-        document.body.classList.remove('modal-open'); //added
+        document.body.classList.remove('modal-open');
       }
     },
     false
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
-    document.body.classList.remove('modal-open'); //added
-    // document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
   });
 
   //added jQuery
@@ -116,6 +116,4 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-
-  // end
 });
